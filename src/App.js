@@ -23,6 +23,15 @@ class App extends Component {
     ],
   };
 
+  constructor() {
+    super();
+    console.log('App - constructor');
+  }
+
+  componentDidMount() {
+    console.log('App - mounted!');
+  }
+
   handleDelete = (counterId) => {
     //   delete one counter from counters list
     const counters = this.state.counters.filter((c) => c.id !== counterId);
@@ -56,6 +65,7 @@ class App extends Component {
   };
 
   render() {
+    console.log('App - rendered!');
     return (
       <React.Fragment>
         <NavBar totalCounters={this.state.counters.filter((c) => c.value > 0).length} />
