@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 class Counters extends Component {
   state = {
-    counter: [
+    counters: [
       {
         id: 0,
         value: 0,
