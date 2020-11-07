@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import Counter from './counter';
 class Counters extends Component {
   render() {
+    const { onReset, onDelete, onIncrement, counters } = this.props;
     return (
       <div>
         <span>show Counters</span>
-        <button className='btn btn-primary btn-sm' onClick={this.props.onReset}>
+        <button className='btn btn-primary btn-sm' onClick={onReset}>
           Reset All
         </button>
-        {this.props.counters.map((c) => (
-          <Counter key={c.id} counter={c} onDelete={this.props.onDelete} onIncrement={this.props.onIncrement} />
+        {counters.map((c) => (
+          <Counter key={c.id} counter={c} onDelete={onDelete} onIncrement={onIncrement} />
         ))}
       </div>
     );
