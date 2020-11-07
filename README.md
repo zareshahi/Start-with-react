@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+**Note** that this project create by mosh hamedani in [youtube course](https://www.youtube.com/watch?v=Ke90Tje7VS0)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
