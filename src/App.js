@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import NavBar from './components/navBar';
-import Counters from './components/counters';
+import React, { Component } from "react";
+import NavBar from "./components/navBar";
+import Counters from "./components/counters";
 class App extends Component {
   state = {
     counters: [
@@ -25,11 +25,11 @@ class App extends Component {
 
   constructor() {
     super();
-    console.log('App - constructor');
+    console.log("App - constructor");
   }
 
   componentDidMount() {
-    console.log('App - mounted!');
+    console.log("App - mounted!");
   }
 
   handleDelete = (counterId) => {
@@ -65,11 +65,13 @@ class App extends Component {
   };
 
   render() {
-    console.log('App - rendered!');
+    console.log("App - rendered!");
     return (
       <React.Fragment>
-        <NavBar totalCounters={this.state.counters.filter((c) => c.value > 0).length} />
-        <main className='container'>
+        <NavBar
+          totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+        />
+        <main className="container">
           <Counters
             counters={this.state.counters}
             onReset={this.handleReset}
