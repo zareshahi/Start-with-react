@@ -1,7 +1,12 @@
 import React from "react";
 import NavBar from "./navBar";
 
-const About = () => {
+const About = (props) => {
+  // set redirect to home
+  setTimeout(() => {
+    props.history.push("/");
+  }, 2000);
+
   return (
     <div>
       <NavBar />

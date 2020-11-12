@@ -1,5 +1,5 @@
 // stateless functional component
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import React from "react";
 
 const NavBar = ({ totalCounters }) => {
@@ -17,4 +17,5 @@ const NavBar = ({ totalCounters }) => {
   );
 };
 
-export default NavBar;
+// add support router props for any function that didn't call as <route>
+export default withRouter(NavBar);
